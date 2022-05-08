@@ -29,6 +29,6 @@ app.post("/feedbacks", async (req, res) => {
    return res.status(201).send({status: 201, data: {type, comment, screenshot}})
 })
 
-app.listen(3333, () => {
-    console.log("Server started on port 3333")
+app.listen(process.env.PORT || 3333, () => {
+    console.log("Server IS running")
 })
